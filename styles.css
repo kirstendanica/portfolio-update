@@ -69,8 +69,7 @@ nav ul li {
   font-size: 1.5vw;
   line-height: 1em;
   font-family: "Playfair Display", serif;
-  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,
-    font-size 0.3s ease-in-out;
+  transition: transform .3s ease-in-out, color .3s ease-in-out, font-size .3s ease-in-out; 
 }
 
 nav ul li a {
@@ -195,9 +194,9 @@ body.dark-mode {
 
 /* About */
 #about {
-  padding: 2em 0;
   display: flex;
   flex-direction: column;
+  padding-left: 3em;
 }
 #about a {
   color: #333;
@@ -216,21 +215,29 @@ body.dark-mode {
   align-items: center;
 }
 
+#about h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .about-me-content img {
-  width: 500px;
-  height: 500px;
-  margin-right: 2em;
+  width: 350px;
+  height: 400px;
+  margin-right: 4em;
+  margin-bottom: 4em;
+  padding-left: 3em;
 }
 
 .about-me-content p {
   font-size: 1em;
   line-height: 1.6;
-  margin-bottom: 1em;
+  margin-bottom: 5em;
+  text-align: right;
 }
 
 /* Portfolio */
 #portfolio {
-  padding: 2em 0;
+  padding-left: 3em;
 }
 
 .portfolio-skills-grid {
@@ -296,7 +303,7 @@ body.dark-mode {
 
 /* Contact */
 #contact {
-  padding: 2em 0;
+  padding-left: 3em;
 }
 
 #contact h2 {
@@ -364,22 +371,23 @@ body.dark-mode {
     background-color: #a7a29b;
     width: 100vw;
     top: 0;
-    padding-top: 1.5em;
+    z-index: 100;
   }
 
   .resume-link {
     display: none;
   }
-
+  
   nav ul li {
     display: flex;
     font-size: 1.5em;
     align-items: center;
     justify-content: center;
+    margin-top: 0.43em;
   }
 
   #home {
-    margin-top: -1em;
+margin-top: -1em;
   }
 
   .social-links {
@@ -423,4 +431,8 @@ body.dark-mode {
     text-align: center;
     padding: 0.5em;
   }
+  
+.portfolio-grid {
+  max-width: 100%;
+}
 }
