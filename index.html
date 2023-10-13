@@ -3,9 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kirsten Danica Demko - Full Stack Developer based in Cleveland, Ohio" />
     <title>Kirsten Danica Demko | Full Stack Developer</title>
     <link rel="stylesheet" href="./styles.css" />
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,39 +20,43 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   </head>
   <body>
-    <!-- Navigation & links -->
+    <!-- Navigation & socials -->
     <div class="mobile-menu-handler" onclick="toggleNav()">
       <i class="fas fa-bars"></i>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About Me</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="./resume.pdf" download>Resume/CV</a></li>
-        <li><a href="#contact">Contact Me</a></li>
-      </ul>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="./resume.pdf" download>Resume/CV</a></li>
+          <li><a href="#contact">Contact Me</a></li>
+        </ul>
 
-      <div class="social-links">
-        <a href="https://linkedin.com/in/kirsten-demko/" target="_blank"
-          ><i class="fab fa-linkedin"></i
-        ></a>
-        <br />
-        <a href="https://github.com" target="_blank"
-          ><i class="fab fa-github"></i
-        ></a>
-        <a href="https://t.me/kirochkakirochka" target="_blank"
-          ><i class="fab fa-telegram"></i
-        ></a>
-      </div>
-      <div class="resume-link">
-        <br />
-        <button onclick="window.location.href" ="./resume.pdf" download>
-          Download Resume
-        </button>
-      </div>
-    </nav>
+        <div class="social-links">
+          <a href="https://linkedin.com/in/kirsten-demko/" target="_blank"
+            ><i class="fab fa-linkedin"></i
+          ></a>
+          <br />
+          <a href="https://github.com" target="_blank"
+            ><i class="fab fa-github"></i
+          ></a>
+          <a href="https://t.me/kirochkakirochka" target="_blank"
+            ><i class="fab fa-telegram"></i
+          ></a>
+        </div>
+        <div class="resume-link">
+          <br />
+          <button onclick="window.location.href='./resume.pdf'" download>
+            Download Resume
+          </button>
+        </div>
 
+        <!-- Darkmode -->
+      </nav>
+      <input type="checkbox" id="dark-mode-input" />
+    </header>
     <!-- Main -->
 
     <main id="main-content">
@@ -69,41 +76,19 @@
               I'm Kirsten (kers-ten) - a software developer with a passion for
               code and creativity. My experience spans the full stack, from a
               beautiful & responsive frontend to a secure backend with solutions
-              that are both efficient and elegant, I love creating solutions
-              that are both efficient and elegant.
-            </p>
-            <p>
-              With over three years of self-study, supplemented by 18 weeks of
-              formal cohort training and certification, I've actively honed
-              <a href="">my skills</a> in software development (including the
-              crucial, undertaught soft skills)
-            </p>
-            <p>
-              Based in Cleveland, Ohio yet happy to connect remotely far and
-              wide.
-            </p>
-            <p>
+              that are both efficient and elegant. With over three years of
+              self-study, supplemented by 18 weeks of formal cohort training and
+              certification, I've actively honed
+              <a href="#skills-section">my skills</a> in software development
+              (including the crucial, undertaught soft skills) Based in
+              Cleveland, Ohio yet happy to connect remotely far and wide.
               Birding, indulging in the world of design (tech, fashion,
               interior, etc) make up much of my non-programming free time, which
               intertwines with my knack for drawing, writing & stories, coming
               up with quick-witted ideas & letting my imagination do its thing.
               One of my greatest personal goals is to one day learn some game
               development skills, and bring to life something that I've been
-              dreaming of making for a long time now (stay tuned!)
-            </p>
-            <p>
-              I've been lucky enough to travel and live in many places around
-              the world which has sparked an interest in languages (see my
-              personal project: Melolingo) This has given me a unique
-              perspective that I bring into all areas of my life.
-            </p>
-            <p>
-              If you'd like to know more about my professional experience, have
-              a <a href="">look my full resume (no download)</a>, & connect with
-              me via
-              <a href="https://www.linkedin.com/in/kirsten-demko/">LinkedIn</a>
-              (alternatively you can send me a message directly
-              <a href="#contact">from right here</a>)
+              dreaming of for a long time now (stay tuned!)
             </p>
           </div>
         </div>
