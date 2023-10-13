@@ -34,6 +34,15 @@ h6 {
   padding: 1em;
 }
 
+.description-main {
+  font-size: 1em !important;
+}
+.name {
+  font-family: "Inter", sans-serif;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
 /* Navigation & links */
 nav {
   position: fixed;
@@ -54,6 +63,14 @@ nav ul {
 nav ul li {
   display: block;
   margin-right: 1em;
+  z-index: 100;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 1.5vw;
+  line-height: 1em;
+  font-family: "Playfair Display", serif;
+  transition: transform 0.3s ease-in-out, color 0.3s ease-in-out,
+    font-size 0.3s ease-in-out;
 }
 
 nav ul li a {
@@ -64,6 +81,8 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #aea9a2;
+  font-style: italic;
+  transform: translate(5px);
 }
 
 .social-links {
@@ -341,6 +360,26 @@ body.dark-mode {
   nav ul {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    background-color: #a7a29b;
+    width: 100vw;
+    top: 0;
+    padding-top: 1.5em;
+  }
+
+  .resume-link {
+    display: none;
+  }
+
+  nav ul li {
+    display: flex;
+    font-size: 1.5em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #home {
+    margin-top: -1em;
   }
 
   .social-links {
