@@ -12,7 +12,6 @@ const greetings = [
 
 const greetingElement = document.getElementById("greeting");
 let index = 0;
-
 function changeGreeting() {
   greetingElement.style.opacity = "0";
 
@@ -27,7 +26,6 @@ function changeGreeting() {
     }
   }, 500);
 }
-
 // Change lang greeting after several seconds
 setInterval(changeGreeting, 4000);
 
@@ -55,4 +53,3 @@ const bodyElement = document.querySelector("body");
 darkModeInput.addEventListener("change", () => {
   bodyElement.classList.toggle("dark-mode");
 });
-
