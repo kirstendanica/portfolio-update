@@ -7,25 +7,26 @@ const greetings = [
   "Hej, välkomna",
   "Hei, tervetuloa",
   "Ciao, benvenuto",
-  "مرحبا أهلا وسهلا",
+  "مرحبا أهلا وسهلا"
 ];
 
 const greetingElement = document.getElementById("greeting");
 let index = 0;
+
 function changeGreeting() {
   greetingElement.style.opacity = "0";
 
   setTimeout(() => {
-    greetingElement.textContent = greetings[index];
-    greetingElement.style.opacity = "1";
+      greetingElement.textContent = greetings[index];
+      greetingElement.style.opacity = "1";
+      index++;
 
-    index++;
-
-    if (index === greetings.length) {
-      index = 0;
-    }
+      if (index === greetings.length) {
+          index = 0;
+      }
   }, 500);
 }
+
 // Change lang greeting after several seconds
 setInterval(changeGreeting, 4000);
 
@@ -38,18 +39,22 @@ function toggleNav() {
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", function (e) {
-    e.preventDefault();
+      e.preventDefault();
 
-    document.querySelector(this.hash).scrollIntoView({
-      behavior: "smooth",
-    });
+      document.querySelector(this.hash).scrollIntoView({
+          behavior: "smooth"
+      });
   });
 });
 
-// Darkmode
+// Dark mode
 const darkModeInput = document.getElementById("dark-mode-input");
 const bodyElement = document.querySelector("body");
+const elementsToToggle = document.querySelectorAll("header, nav, .container, footer, .project-info, #contact-form");
 
 darkModeInput.addEventListener("change", () => {
   bodyElement.classList.toggle("dark-mode");
+  elementsToToggle.forEach(element => {
+      element.classList.toggle("dark-mode");
+  });
 });

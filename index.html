@@ -1,302 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Kirsten Danica Demko - Full Stack Developer based in Cleveland, Ohio" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Kirsten Danica Demko - Full Stack Developer based in Cleveland, Ohio">
     <title>Kirsten Danica Demko | Full Stack Developer</title>
-    <link rel="stylesheet" href="./styles.css" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap"
-      rel="stylesheet" />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  </head>
-  <body>
-    <!-- Navigation & socials -->
+    <link href="./styles.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
     <div class="mobile-menu-handler" onclick="toggleNav()">
-      <i class="fas fa-bars"></i>
+        <i class="fas fa-bars"></i>
     </div>
     <header>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li>
-            <a
-              href="https://docdro.id/gV8W9Q5"
-              onclick="window.open('https://docdro.id/gV8W9Q5', '_blank'); return false;"
-              >Resume</a
-            >
-          </li>
-          <li><a href="#contact">Contact Me</a></li>
-        </ul>
-
-        <div class="social-links">
-          <a href="https://linkedin.com/in/kirsten-demko/" target="_blank"
-            ><i class="fab fa-linkedin"></i
-          ></a>
-          <br />
-          <a href="https://github.com" target="_blank"
-            ><i class="fab fa-github"></i
-          ></a>
-          <a href="https://t.me/kirochkakirochka" target="_blank"
-            ><i class="fab fa-telegram"></i
-          ></a>
-        </div>
-        <div class="resume-link">
-          <br />
-          <button onclick="window.open('assets/pdf/resume.pdf', '_blank');">
-            Download Resume
-          </button>
-        </div>
-
-        <!-- Darkmode -->
-      </nav>
-      <input type="checkbox" id="dark-mode-input" />
-    </header>
-    <!-- Main -->
-
-    <main id="main-content">
-      <section id="home">
-        <div class="container">
-          <h1 id="greeting">Hello, welcome</h1>
-          <h2 class="name">Kirsten Demko</h2>
-          <p class="description-main">
-            Full Stack Developer / Frontend Design / Backend Solutionist
-          </p>
-        </div>
-      </section>
-
-      <section id="about">
-        <div class="container">
-          <h2>About Me</h2>
-          <div class="about-me-content">
-            <div class="wrapper">
-            <img src="./assets/img/kirsten-demko.jpg" alt="Kirsten Demko" class="prof-img" />
-          </div>
-            <p>
-              I'm Kirsten (kers-ten) - a software developer with a passion for
-              code and creativity. My experience spans the full stack, from a
-              beautiful & responsive frontend to a secure backend with solutions
-              that are both efficient and elegant. With over three years of
-              self-study, supplemented by 18 weeks of formal cohort training and
-              certification, I've actively honed
-              <a href="#skills-section">my skills</a> in software development
-              (including the crucial, undertaught soft skills) Based in
-              Cleveland, Ohio yet happy to connect remotely far and wide.
-              Birding, indulging in the world of design (tech, fashion,
-              interior, etc) make up much of my non-programming free time, which
-              intertwines with my knack for drawing, writing & stories, coming
-              up with quick-witted ideas & letting my imagination do its thing.
-              One of my greatest personal goals is to one day learn some game
-              development skills, and bring to life something that I've been
-              dreaming of for a long time now (stay tuned!)
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section id="portfolio">
-        <div class="container">
-          <h2>What I've done</h2>
-          <div class="portfolio-skills-grid">
-            <div class="portfolio-grid">
-              <div class="project-card">
-                <img
-                  src="./assets/img/dummy_200x200_ffffff_cccccc.png"
-                  alt="Melolingo" />
-                <div class="project-info">
-                  <h3>Melolingo</h3>
-                  <p>
-                    Casual language learning application for those who love
-                    music
-                  </p>
-                  <ul class="tech-used">
-                    <li>Java</li>
-                    <li>Spring</li>
-                    <li>MySQL</li>
-                  </ul>
-                  <a
-                    href="https://github.com/kirstendanica/MelolingoBackend"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
-
-              <div class="project-card">
-                <img
-                  src="./assets/img/dummy_200x200_ffffff_cccccc.png"
-                  alt="Melolingo" />
-                <div class="project-info">
-                  <h3>Melolingo</h3>
-                  <p>
-                    Casual language learning application for those who love
-                    music
-                  </p>
-                  <ul class="tech-used">
-                    <li>Java</li>
-                    <li>Spring</li>
-                    <li>MySQL</li>
-                  </ul>
-                  <a
-                    href="https://github.com/kirstendanica/MelolingoBackend"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
-
-              <div class="project-card">
-                <img
-                  src="./assets/img/dummy_200x200_ffffff_cccccc.png"
-                  alt="Melolingo" />
-                <div class="project-info">
-                  <h3>Melolingo</h3>
-                  <p>
-                    Casual language learning application for those who love
-                    music
-                  </p>
-                  <ul class="tech-used">
-                    <li>Java</li>
-                    <li>Spring</li>
-                    <li>MySQL</li>
-                  </ul>
-                  <a
-                    href="https://github.com/kirstendanica/MelolingoBackend"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
-
-              <div class="project-card">
-                <img
-                  src="./assets/img/dummy_200x200_ffffff_cccccc.png"
-                  alt="Melolingo" />
-                <div class="project-info">
-                  <h3>Melolingo</h3>
-                  <p>
-                    Casual language learning application for those who love
-                    music
-                  </p>
-                  <ul class="tech-used">
-                    <li>Java</li>
-                    <li>Spring</li>
-                    <li>MySQL</li>
-                  </ul>
-                  <a
-                    href="https://github.com/kirstendanica/MelolingoBackend"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
-              <div class="project-card">
-                <img
-                  src="./assets/img/dummy_200x200_ffffff_cccccc.png"
-                  alt="Melolingo" />
-                <div class="project-info">
-                  <h3>Melolingo</h3>
-                  <p>
-                    Casual language learning application for those who love
-                    music
-                  </p>
-                  <ul class="tech-used">
-                    <li>Java</li>
-                    <li>Spring</li>
-                    <li>MySQL</li>
-                  </ul>
-                  <a
-                    href="https://github.com/kirstendanica/MelolingoBackend"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
-              <div class="project-card">
-                <img
-                  src="./assets/img/dummy_200x200_ffffff_cccccc.png"
-                  alt="Melolingo" />
-                <div class="project-info">
-                  <h3>Melolingo</h3>
-                  <p>
-                    Casual language learning application for those who love
-                    music
-                  </p>
-                  <ul class="tech-used">
-                    <li>Java</li>
-                    <li>Spring</li>
-                    <li>MySQL</li>
-                  </ul>
-                  <a
-                    href="https://github.com/kirstendanica/MelolingoBackend"
-                    target="_blank"
-                    >GitHub</a
-                  >
-                </div>
-              </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="https://kdanicdmko.tiiny.site/" onclick="return window.open('https://kdanicdmko.tiiny.site/', '_blank'), !1">Resume</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+            </ul>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/kirsten-demko/" target="_blank" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/kirstendanica" target="_blank" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://t.me/kirochkakirochka" target="_blank" aria-label="Telegram Profile">
+                    <i class="fab fa-telegram"></i>
+                </a>
             </div>
-
-            <!-- Skills -->
-            <aside id="skills-section">
-              <h2>Skills at a glance</h2>
-              <ul id="skills-list">
-                <li>HTML & CSS</li>
-                <li>JavaScript</li>
-                <li>Java</li>
-                <li>Spring Boot</li>
-                <li>Spring Data JPA</li>
-                <li>Git</li>
-                <li>REST API & RESTful API Development</li>
-                <li>MERN Stack (MongoDB, Express.js, React.js, Node.js)</li>
-                <li>CSS Frameworks (Bootstrap, Tailwind & Bulma)</li>
-              </ul>
-            </aside>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <div class="container">
-          <h2>Contact Me</h2>
-          <form
-            action="https://formspree.io/f/xleyabqa"
-            method="POST"
-            id="contact-form">
-            <label for="name">Who / what?</label><br />
-            <input type="text" id="name" name="name" /><br />
-
-            <label for="email">Email?</label><br />
-            <input type="text" id="email" name="_replyto" /><br />
-
-            <label for="message">Message?</label><br />
-            <textarea id="message" name="message"></textarea><br />
-            <!-- Spam prevention -->
-            <input type="hidden" name="_gotcha" />
-
-            <input
-              type="submit"
-              button
-              type="submit"
-              type="submit"
-              class="submit-btn"
-              value="SEND" />
-          </form>
-        </div>
-      </section>
+            <div class="resume-link">
+                <br>
+                <button onclick="window.open('assets/pdf/kdresumepdf2024.pdf', '_blank')">Download Resume</button>
+            </div>
+        </nav>
+        <input type="checkbox" id="dark-mode-input">
+    </header>
+    <main id="main-content">
+        <section id="home">
+            <div class="container">
+                <h1 id="greeting">Hello, welcome</h1>
+                <h2 class="name">Kirsten Demko</h2>
+                <h3 class="description-main">Full Stack Developer / Frontend Design / Backend Solutionist</h3>
+            </div>
+        </section>
+        <section id="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-me-content">
+                    <div class="wrapper">
+                        <img alt="Kirsten Demko" src="./assets/img/kirsten-demko.jpg" class="prof-img">
+                    </div>
+                    <p>
+                        I'm Kirsten (kers-ten) - a versatile professional with a passion for code and creativity.
+                        With over three years of self-study and 460+ training hours, I have honed my skills in web development,
+                        data entry, and tech support. My experience spans from building beautiful and responsive frontends to
+                        ensuring secure backend solutions. I am adept at identifying technical roadblocks and crafting effective
+                        solutions. Based in Cleveland, Ohio, yet happy to connect remotely. In my free time, I enjoy birding,
+                        design, drawing, writing, and exploring game development. Seeking opportunities in web development,
+                        data entry, and tech support roles.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section id="portfolio">
+            <div class="container">
+                <h2>What I've done</h2>
+                <div class="portfolio-skills-grid">
+                    <div class="portfolio-grid">
+                        <div class="project-card">
+                            <img alt="Melolingo" src="./assets/img/dummy_200x200_ffffff_cccccc.png">
+                            <div class="project-info">
+                                <h3>Melolingo</h3>
+                                <p>Casual language learning application for those who love music</p>
+                                <ul class="tech-used">
+                                    <li>Java</li>
+                                    <li>Spring</li>
+                                    <li>MySQL</li>
+                                </ul>
+                                <a href="https://github.com/kirstendanica/MelolingoBackend" target="_blank">GitHub</a>
+                            </div>
+                        </div>
+                        <!-- Repeat project-card divs as needed -->
+                    </div>
+                    <aside id="skills-section">
+                        <h2>Skills at a glance</h2>
+                        <ul id="skills-list">
+                            <li>HTML & CSS</li>
+                            <li>JavaScript</li>
+                            <li>Java</li>
+                            <li>Spring Boot</li>
+                            <li>Spring Data JPA</li>
+                            <li>Git</li>
+                            <li>REST API & RESTful API Development</li>
+                            <li>MERN Stack (MongoDB, Express.js, React.js, Node.js)</li>
+                            <li>CSS Frameworks (Bootstrap, Tailwind & Bulma)</li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <h2>Contact Me</h2>
+                <form action="https://formspree.io/f/xleyabqa" id="contact-form" method="POST">
+                    <label for="name">Who / what?</label><br>
+                    <input id="name" name="name"><br>
+                    <label for="email">Email?</label><br>
+                    <input id="email" name="_replyto"><br>
+                    <label for="message">Message?</label><br>
+                    <textarea id="message" name="message"></textarea><br>
+                    <input type="hidden" name="_gotcha">
+                    <input type="submit" class="submit-btn" value="SEND">
+                </form>
+            </div>
+        </section>
     </main>
-
-    <!-- JavaScript -->
-    <script src="./script.js" defer></script>
-  </body>
+    <script defer src="./script.js"></script>
+</body>
 </html>
