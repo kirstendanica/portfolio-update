@@ -7,7 +7,9 @@
   --body-font: "Inter", sans-serif;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -20,11 +22,17 @@ body {
   background-color: var(--background-color);
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--header-font);
 }
 
@@ -49,11 +57,14 @@ nav {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 1em;
+  width: 200px;
   height: 100vh;
+  padding: 1em;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: var(--background-color);
+  z-index: 1000;
 }
 
 nav ul {
@@ -169,6 +180,11 @@ body.dark-mode {
   border: none;
   font-size: 1.5em;
   cursor: pointer;
+  z-index: 2000;
+}
+
+main {
+  margin-left: 200px;
 }
 
 #home {
@@ -290,189 +306,142 @@ body.dark-mode {
 .tech-used {
   list-style-type: none;
   padding-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .tech-used li {
-  display: inline-block;
-  margin-right: 1em;
+  margin: 0.5em;
+  padding: 0.25em 0.5em;
+  background-color: var(--accent-color);
+  border-radius: 3px;
+  font-size: 0.8em;
 }
 
-#skills-section li {
-  list-style: none;
+.skills-list {
+  list-style-type: none;
+}
+
+.skills-list li {
+  margin-bottom: 0.5em;
 }
 
 #contact {
-  padding-left: 3em;
+  padding: 2em;
 }
 
-#contact h2 {
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
   margin-bottom: 1em;
 }
 
-#contact-form {
-  background-color: #f9f9f9;
-  padding: 1.3em;
-  border-radius: 5px;
-}
-
-#contact-form label {
+.form-group label {
   display: block;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
-#contact-form input[type="text"],
-#contact-form textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
-  padding: .75em;
-  border: none;
-  margin-top: .3em;
-  margin-bottom: 1em;
+  padding: 0.5em;
+  border: 1px solid var(--accent-color);
+  border-radius: 3px;
 }
 
-#contact-form input[type="text"]:focus,
-#contact-form textarea:focus {
-  outline: none;
+.submit-btn {
+  display: block;
+  width: 100%;
 }
 
-#scroll-to-top {
-  display: none;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: var(--accent-color);
+footer {
+  background-color: var(--primary-color);
   color: var(--background-color);
-  border: none;
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  font-size: 24px;
-  cursor: pointer;
-  transition: opacity 0.3s;
+  text-align: center;
+  padding: 1em;
+  margin-top: 2em;
 }
 
-#scroll-to-top:hover {
-  opacity: 0.8;
-}
-
-@media screen and (max-width: 991px) {
-  .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
+@media (max-width: 768px) {
   nav {
-    position: relative;
-    height: auto;
-    flex-direction: row;
-    display: none;
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  nav ul {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    background-color: var(--accent-color);
-    width: 100vw;
-    top: 0;
-    z-index: 100;
-  }
-
-  .resume-link {
-    display: none;
-  }
-
-  nav ul li {
-    display: flex;
-    font-size: 1.5em;
-    align-items: center;
-    justify-content: center;
-    margin-top: .43em;
-  }
-
-  #home {
-    margin-top: -1em;
-  }
-
-  .social-links {
     display: none;
   }
 
   .mobile-menu-handler {
     display: block;
-    position: fixed;
-    z-index: 200;
   }
 
-  #about {
-    padding: 1em;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+  main {
+    margin-left: 0;
   }
 
-  #about h2 {
-    order: -1;
-    font-size: 3em;
-    text-align: center;
-  }
-
-  .about-me-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .about-me-content img {
-    width: 50%;
-    height: auto;
-    margin-right: 1em;
-    order: -1;
-  }
-
-  .about-me-content p {
-    font-size: 1em;
-    text-align: center;
-    padding: .5em;
+  .portfolio-skills-grid {
+    grid-template-columns: 1fr;
   }
 
   .portfolio-grid {
-    max-width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-me-content {
+    flex-direction: column;
+  }
+
+  .about-me-content img {
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-bottom: 2em;
+    padding-left: 0;
+  }
+
+  .about-me-content p {
+    text-align: left;
+  }
+
+  #about, #portfolio {
+    padding-left: 1em;
   }
 }
 
-#dark-mode-toggle {
-  background: none;
-  border: none;
-  cursor: pointer;
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000;
-  padding: 10px;
-  border-radius: 50%;
-  transition: background-color 0.3s ease;
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  nav ul li {
+    font-size: 4vw;
+  }
 }
 
-#dark-mode-toggle:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-#dark-mode-toggle svg {
-  transition: all 0.3s ease;
+.fade-in {
+  animation: fadeIn 1s ease-in;
 }
 
-body.dark-mode #dark-mode-toggle svg {
-  stroke: #ffffff;
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
-body.dark-mode #dark-mode-toggle:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-body.dark-mode #dark-mode-toggle svg path:last-child {
-  opacity: 0;
+.slide-in {
+  animation: slideIn 1s ease-out;
 }
