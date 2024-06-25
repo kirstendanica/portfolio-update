@@ -1,4 +1,3 @@
-// Greeting rotation
 const greetings = [
   "Bonjour, bienvenue",
   "Hola, bienvenido",
@@ -24,13 +23,11 @@ function changeGreeting() {
 
 setInterval(changeGreeting, 4000);
 
-// Toggle nav for mobile devices
 function toggleNav() {
   const nav = document.querySelector("nav");
   nav.classList.toggle("active");
 }
 
-// Smooth scroll for internal links
 document.querySelectorAll('a[href^="#"]').forEach((link) => {
   link.addEventListener("click", function(e) {
     e.preventDefault();
@@ -46,17 +43,26 @@ const body = document.body;
 
 darkModeToggle.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', body.classList.contains('dark-mode'));
+  updateDarkModeIcon();
 });
 
-// Check for saved dark mode preference
+// Check user's dark mode preference
 if (localStorage.getItem('darkMode') === 'true') {
-  bodyElement.classList.add('dark-mode');
+  body.classList.add('dark-mode');
+  updateDarkModeIcon();
 }
 
 function updateDarkModeIcon() {
-  darkModeToggle.textContent = bodyElement.classList.contains('dark-mode') ? '☀️' : '🌙';
+  const icon = darkModeToggle.querySelector('.icon');
+  if (body.classList.contains('dark-mode')) {
+    icon.style.stroke = getComputedStyle(document.documentElement).getPropertyValue('--background-color').trim();
+  } else {
+    icon.style.stroke = getComputedStyle(document.documentElement).getPropertyValue('--text-color').trim();
+  }
 }
 
+// Call to set the correct color of svg toggler
 updateDarkModeIcon();
 
 // Scroll to top functionality
@@ -93,7 +99,7 @@ contactForm.addEventListener('submit', async (e) => {
       alert('Message sent successfully!');
       contactForm.reset();
     } else {
-      throw new Error('Form submission fled');
+      throw new Error('Form submission failed');
     }
   } catch (error) {
     console.error('Error:', error);

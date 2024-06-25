@@ -167,20 +167,38 @@ nav.mobile-nav ul li {
   padding: 1em 0;
 }
 
-body.dark-mode {
-  --background-color: #3b3937;
-  --text-color: #f9f9f9;
-}
-
 #dark-mode-toggle {
   position: fixed;
   top: 10px;
   right: 10px;
   background: none;
   border: none;
-  font-size: 1.5em;
   cursor: pointer;
   z-index: 2000;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+#dark-mode-toggle .icon {
+  width: 24px;
+  height: 24px;
+  stroke: var(--text-color);
+  fill: none;
+  stroke-width: 2;
+  transition: stroke 0.3s ease;
+}
+
+#dark-mode-toggle .icon.dark {
+  stroke: var(--background-color);
+}
+
+body.dark-mode {
+  --background-color: #333;
+  --text-color: #fdfaf8;
+}
+
+body.dark-mode #dark-mode-toggle .icon {
+  stroke: var(--background-color);
 }
 
 main {
@@ -434,7 +452,6 @@ footer {
 @keyframes slideIn {
   from {
     transform: translateY(50px);
-    opacity: 0;
   }
   to {
     transform: translateY(0);
