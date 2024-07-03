@@ -77,6 +77,7 @@ if (scrollToTopButton) {
 }
 
 const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
 
 contactForm?.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -91,13 +92,15 @@ contactForm?.addEventListener('submit', async (e) => {
     });
     
     if (response.ok) {
-      alert('Message sent successfully!');
+      formStatus.textContent = 'Message sent successfully!';
+      formStatus.className = 'success';
       contactForm.reset();
     } else {
       throw new Error('Form submission failed');
     }
   } catch (error) {
     console.error('Error:', error);
-    alert('There was an error sending your message. Please try again later.');
+    formStatus.textContent = 'There was an error sending your message. Please try again later.';
+    formStatus.className = 'error';
   }
 });

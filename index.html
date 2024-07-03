@@ -139,21 +139,30 @@
                         </div>
                     </section>
                     
-        <section id="contact">
-            <div class="container">
-                <h2>Contact Me</h2>
-                <form action="https://formspree.io/f/xleyabqa" id="contact-form" method="POST">
-                    <label for="name">Who / what?</label><br>
-                    <input type="text" id="name" name="name" required><br>
-                    <label for="email">Email?</label><br>
-                    <input type="email" id="email" name="_replyto" required><br>
-                    <label for="message">Message?</label><br>
-                    <textarea id="message" name="message" required></textarea><br>
-                    <input type="hidden" name="_gotcha">
-                    <input type="submit" class="submit-btn" value="SEND">
-                </form>
-            </div>
-        </section>
+                    <section id="contact">
+                        <div class="container">
+                            <h2>Contact Me</h2>
+                            <form action="https://formspree.io/f/xleyabqa" id="contact-form" method="POST">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="_replyto" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" name="message" required></textarea>
+                                </div>
+                                <input type="hidden" name="_gotcha">
+                                <button type="submit" class="submit-btn">Send Message</button>
+                            </form>
+                            <div id="form-status"></div>
+                        </div>
+                    </section>
+                    
+
     </main>
     <footer>
         <div class="container">
